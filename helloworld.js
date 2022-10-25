@@ -24,15 +24,25 @@ const RonHTML = document.getElementById("Ron")
 
 
 
-colors = (c) => c;
+colors = (a,b,c) => {
+    HarryHTML.style.color = a
+    HermioneHTML.style.color = b
+    RonHTML.style.color = c
+}
 
-fullnames = (a,b) => a + " " + b;
+fullnames = () => {
+    HarryHTML.innerHTML = Harry.Firstname + " " + Harry.Lastname
+    HermioneHTML.innerHTML = Hermione.Firstname + " " + Hermione.Lastname
+    RonHTML.innerHTML = Ron.Firstname + " " + Ron.Lastname
+};
 
-firstnamesfunc = (d) => d;
+firstnamesfunc = () => {
+    HarryHTML.innerHTML = Harry.Firstname
+    HermioneHTML.innerHTML = Hermione.Firstname
+    RonHTML.innerHTML = Ron.Firstname
+};
 
-HarryHTML.innerHTML = firstnamesfunc(Harry.Firstname)
-HermioneHTML.innerHTML = firstnamesfunc(Hermione.Firstname)
-RonHTML.innerHTML = firstnamesfunc(Ron.Firstname )
+firstnamesfunc();
 
 var button = document.getElementById("btn")
 
@@ -41,31 +51,19 @@ let i = 1;
 button.addEventListener("click", () =>{
     
     if(i == 1){
-    HarryHTML.innerHTML = fullnames(Harry.Firstname , Harry.Lastname)
-    HermioneHTML.innerHTML = fullnames(Hermione.Firstname , Hermione.Lastname)
-    RonHTML.innerHTML = fullnames(Ron.Firstname , Ron.Lastname)
     
-    HarryHTML.style.color = colors(Harry.haircolor)
-    HermioneHTML.style.color = colors(Hermione.haircolor)
-    RonHTML.style.color = colors(Ron.haircolor)
-
-    i = 2;
+        fullnames();
+    
+        colors(Harry.haircolor,Hermione.haircolor,Ron.haircolor)
+        
+        i = 2;
 }else if (i = 2){
-    HarryHTML.style.color = colors("Black")
-    HermioneHTML.style.color = colors("Black")
-    RonHTML.style.color = colors("Black")
+    colors("Black","Black","Black")
     
-    HarryHTML.innerHTML = firstnamesfunc(Harry.Firstname)
-    HermioneHTML.innerHTML = firstnamesfunc(Hermione.Firstname)
-    RonHTML.innerHTML = firstnamesfunc(Ron.Firstname)
-
+    firstnamesfunc();
+    
     i = 1;
 }
 
     
 })
-
-
-
-
-
