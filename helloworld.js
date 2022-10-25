@@ -9,7 +9,7 @@ const Harry = {
 const Hermione = {
     Firstname: "Hermione",
     Lastname: "Granger",
-    color: "Brown",
+    haircolor: "Brown",
 }
 
 const Ron = {
@@ -46,14 +46,14 @@ button.addEventListener("click", () =>{
     RonHTML.innerHTML = fullnames(Ron.Firstname , Ron.Lastname)
     
     HarryHTML.style.color = colors(Harry.haircolor)
-    HermioneHTML.style.color = colors(Hermione.color)
+    HermioneHTML.style.color = colors(Hermione.haircolor)
     RonHTML.style.color = colors(Ron.haircolor)
 
     i = 2;
 }else if (i = 2){
-    HarryHTML.style.color = "Black"
-    HermioneHTML.style.color = "Black"
-    RonHTML.style.color = "Black"
+    HarryHTML.style.color = colors("Black")
+    HermioneHTML.style.color = colors("Black")
+    RonHTML.style.color = colors("Black")
     
     HarryHTML.innerHTML = firstnamesfunc(Harry.Firstname)
     HermioneHTML.innerHTML = firstnamesfunc(Hermione.Firstname)
