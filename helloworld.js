@@ -30,6 +30,10 @@ fullnames = (a,b) => a + " " + b;
 
 firstnamesfunc = (d) => d;
 
+HarryHTML.innerHTML = firstnamesfunc(Harry.Firstname)
+HermioneHTML.innerHTML = firstnamesfunc(Hermione.Firstname)
+RonHTML.innerHTML = firstnamesfunc(Ron.Firstname )
+
 var button = document.getElementById("btn")
 
 let i = 1;
