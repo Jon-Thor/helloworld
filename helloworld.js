@@ -1,16 +1,4 @@
 
-var x = 20;
-var s = 10;
-
-function addNumbers(num1, num2) {
-    result = num1 + num2;
-    console.log(result)
-}
-addNumbers(20, 50);
-
-
-
-
 
 const Harry = {
     Firstname: "Harry",
@@ -34,7 +22,6 @@ const HarryHTML = document.getElementById("Harry")
 const HermioneHTML = document.getElementById("Hermione")
 const RonHTML = document.getElementById("Ron")
 
-console.log(Harry.Firstname , Harry.Lastname)
 
 
 colors = (c) => c;
