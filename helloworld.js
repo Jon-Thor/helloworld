@@ -68,6 +68,7 @@ button.addEventListener("click", () =>{
     
 })
 
+/*Second project*/
 destructwizards = (wiz1,wiz2,wiz3) => {
     var {Firstname: harryfirstname, Lastname: harrylastname} =wiz1
     var {Firstname: hermionefirstname, Lastname: hermionelastname} =wiz2
@@ -105,6 +106,8 @@ const renderallwizards = () => {
 
 renderallwizards()
 renderallwizards()
+
+/*Second project*/
 
 const user1 = {
     name: "Paul",
