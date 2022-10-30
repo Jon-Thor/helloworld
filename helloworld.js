@@ -3,19 +3,19 @@
 const Harry = {
     Firstname: "Harry",
     Lastname: "potter",
-    haircolor: "Black",
+    haircolor: "black",
 }
 
 const Hermione = {
     Firstname: "Hermione",
     Lastname: "Granger",
-    haircolor: "Brown",
+    haircolor: "brown",
 }
 
 const Ron = {
     Firstname: "Ron",
     Lastname: "Weasley",
-    haircolor: "Red",
+    haircolor: "red",
 }
 
 const HarryHTML = document.getElementById("Harry")
@@ -67,3 +67,72 @@ button.addEventListener("click", () =>{
 
     
 })
+
+destructwizards = (wiz1,wiz2,wiz3) => {
+    var {Firstname: harryfirstname, Lastname: harrylastname} =wiz1
+    var {Firstname: hermionefirstname, Lastname: hermionelastname} =wiz2
+    var {Firstname: ronfirstname, Lastname: ronlastname} =wiz3
+
+    const Harryfullname = harryfirstname + " " + harrylastname;
+    const Hermionefullname = hermionefirstname  + " " +  hermionelastname;
+    const Ronfullname = ronfirstname + " " +  ronlastname;
+
+    return({
+        Harryfullname: Harryfullname,
+        Hermionefullname: Hermionefullname,
+        Ronfullname: Ronfullname,
+    })
+}
+
+
+const renderallwizards = () => {
+    var i = 0;
+    const newcolors = [Harry.haircolor,Hermione.haircolor,Ron.haircolor]
+    const allthewizard = destructwizards(Harry,Hermione,Ron)
+    console.log(allthewizard)
+    const wizardlist = [allthewizard]
+    wizardlist.forEach(wizard => console.log(wizard))
+    wizardlist.forEach((wizard) => {
+        for(let names in wizard){
+        let wizardElement = document.createElement("li");
+        wizardElement.textContent = allthewizard[names]
+        wizardElement.style.cssText = `color: ${newcolors[i]}`
+        document.body.appendChild(wizardElement)
+        i++
+    }
+    })
+}
+
+renderallwizards()
+renderallwizards()
+
+const user1 = {
+    name: "Paul",
+    age: 20,
+    salary: 60000,
+}
+
+const user2 = {
+    name: "Lisa",
+    age: 30,
+    salary: 90000,
+}
+
+const average = (person1, person2) =>{
+    var {age: persononeage,salary: person1salary} = person1
+    
+
+    var {age: persontwoage,salary: person2salary} = person2
+
+    const avgage = (persononeage + persontwoage) / 2;
+    const avgsalary = (person1salary + person2salary) / 2;
+
+    return({
+        avgage: avgage,
+        avgsalary: avgsalary,
+    })
+    
+}
+
+const averageobject = average(user1,user2)
+console.log(averageobject)
